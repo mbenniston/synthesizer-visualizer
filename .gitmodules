@@ -1,0 +1,6 @@
+[submodule "synthesizer"]
+	path = synthesizer
+	url = https://github.com/mbenniston/synthesizer.git
+[submodule "midi"]
+	path = midi
+	url = https://github.com/mbenniston/midi.git

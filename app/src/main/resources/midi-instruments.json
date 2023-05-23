@@ -1,0 +1,179 @@
+{
+    "namedWaves": {
+        "voice1": {
+            "waveType": "triangle",
+            "amplitude": 0.5,
+            "frequency": 300
+        },
+        "voice2": {
+            "waveType": "saw",
+            "amplitude": 0.2,
+            "frequency": 550
+        },
+        "voice3": {
+            "waveType": "sine",
+            "amplitude": 0.005,
+            "frequency": 5
+        },
+        "voice4": {
+            "waveType": "modulated",
+            "messageWave": "voice2",
+            "modulatingWave": "voice3",
+            "frequency": 440
+        }
+    },
+    "namedVoices": {
+        "1": {
+            "waveForm": "voice1",
+            "envelope": {}
+        },
+        "2": {
+            "waveForm": "voice4",
+            "envelope": {}
+        }
+    },
+    "namedInstruments": {
+        "Piano": {
+            "programRange": {
+                "start": 0,
+                "end": 7
+            },
+            "notes": [
+                {
+                    "noteId": 60,
+                    "voice": {
+                        "waveForm": {
+                            "waveType": "sample",
+                            "sampleSource": "internal:/samples/UprightPianoKW-SFZ-20220221/samples/C4vL.wav",
+                            "loop": {
+                                "sampleStart": 89817,
+                                "sampleEnd": 90659
+                            },
+                            "amplitude": 0.4
+                        },
+                        "envelope": {
+                            "attack": 0,
+                            "decay": 0,
+                            "sustain": 1
+                        }
+                    }
+                },
+                {
+                    "noteId": 48,
+                    "voice": {
+                        "waveForm": {
+                            "waveType": "sample",
+                            "sampleSource": "internal:/samples/UprightPianoKW-SFZ-20220221/samples/C3vL.wav",
+                            "loop": {
+                                "sampleStart": 89817,
+                                "sampleEnd": 90659
+                            },
+                            "amplitude": 0.4
+                        },
+                        "envelope": {
+                            "attack": 0,
+                            "decay": 0,
+                            "sustain": 1
+                        }
+                    }
+                },
+                {
+                    "noteId": 72,
+                    "voice": {
+                        "waveForm": {
+                            "waveType": "sample",
+                            "sampleSource": "internal:/samples/UprightPianoKW-SFZ-20220221/samples/C5vL.wav",
+                            "loop": {
+                                "sampleStart": 89817,
+                                "sampleEnd": 90659
+                            },
+                            "amplitude": 0.2
+                        },
+                        "envelope": {
+                            "attack": 0,
+                            "decay": 0
+                        }
+                    }
+                }
+            ]
+        },
+        "Guitar": {
+            "programRange": {
+                "start": 24,
+                "end": 31
+            },
+            "notes": [
+                {
+                    "noteId": 69,
+                    "voice": {
+                        "waveForm": {
+                            "waveType": "square",
+                            "amplitude": 0.1,
+                            "frequency": 440
+                        },
+                        "envelope": {}
+                    }
+                }
+            ]
+        },
+        "zEnsemble": {
+            "programRange": {
+                "start": 48,
+                "end": 55
+            },
+            "notes": [
+                {
+                    "noteId": 69,
+                    "voice": {
+                        "waveForm": {
+                            "waveType": "additive",
+                            "topWave": {
+                                "waveType": "square",
+                                "amplitude": 0.1,
+                                "frequency": 440
+                            },
+                            "bottomWave": {
+                                "waveType": "square",
+                                "amplitude": 0.1,
+                                "frequency": 880
+                            }
+                        },
+                        "envelope": {}
+                    }
+                }
+            ]
+        },
+        "Percussion": {
+            "programRange": {
+                "start": 8,
+                "end": 15
+            },
+            "notes": [
+                {
+                    "noteId": 69,
+                    "voice": {
+                        "waveForm": {
+                            "waveType": "modulated",
+                            "messageWave": {
+                                "waveType": "sine",
+                                "amplitude": 0.3
+                            },
+                            "modulatingWave": {
+                                "waveType": "sine",
+                                "amplitude": 0.5,
+                                "frequency": 0.1
+                            },
+                            "frequency": 440
+                        },
+                        "envelope": {
+                            "sustain": 0.1,
+                            "attack": 0.01,
+                            "decay": 0.3,
+                            "release": 0.3
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
